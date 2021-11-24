@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Select from 'react-select';
 import { createBook } from '../actions';
 import store from '../reducers';
 
@@ -8,12 +9,22 @@ const BooksForm = () => {
     category: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setBookState({
-      ...bookState,
-      [name]: value,
-    });
+  const options = [
+    { value: 'Action', label: 'Action' },
+    { value: 'Biography', label: 'Biography' },
+    { value: 'History', label: 'History' },
+    { value: 'Horror', label: 'Horror' },
+    { value: 'Kids', label: 'Kids' },
+    { value: 'Learning', label: 'Learning' },
+    { value: 'Sci-Fi', label: 'Sci-Fi' },
+  ];
+
+  const handleTitleChange = (e) => {
+    setBookState({ ...bookState, title: e.target.value });
+  };
+
+  const handleCategoryChange = (e) => {
+    setBookState({ ...bookState, category: e.value });
   };
 
   const handleSubmit = (e) => {
@@ -25,13 +36,10 @@ const BooksForm = () => {
     });
   };
 
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
     <form>
-      <input type="text" name="title" placeholder="Book title" value={bookState.title} onChange={handleChange} />
-      <select name="category" value={bookState.category} onChange={handleChange}>
-        {categories.map((category, index) => <option key={index.id}>{category}</option>)}
-      </select>
+      <input type="text" id="title" placeholder="title" value={bookState.title} onChange={(e) => handleTitleChange(e)} />
+      <Select options={options} onChange={(e) => handleCategoryChange(e)} />
       <button type="submit" onClick={handleSubmit}>Create book</button>
     </form>
   );
