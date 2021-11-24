@@ -13,8 +13,20 @@ const Book = ({ book, handleRemoveBook }) => {
 };
 
 Book.propTypes = {
-  book: PropTypes.shape.isRequired,
+  book: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  }),
   handleRemoveBook: PropTypes.func.isRequired,
+};
+
+Book.defaultProps = {
+  book: PropTypes.shape({
+    bookId: '98',
+    title: 'Atila the Hun',
+    category: 'History',
+  }),
 };
 
 export default Book;
