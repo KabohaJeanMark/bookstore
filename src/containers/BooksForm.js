@@ -27,9 +27,15 @@ const BooksForm = () => {
     setBookState({ ...bookState, category: e.value });
   };
 
+  const bookId = Math.floor(Math.random() * 100);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    store.dispatch(createBook(bookState));
+    store.dispatch(createBook({
+      id: bookId,
+      title: bookState.title,
+      category: bookState.category,
+    }));
     setBookState({
       title: '',
       category: '',
