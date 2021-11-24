@@ -1,4 +1,6 @@
-const Book = (book) => {
+import PropTypes from 'prop-types';
+
+const Book = ({ book }) => {
   const { id, title, category } = book;
   return (
     <tr key={id}>
@@ -7,6 +9,10 @@ const Book = (book) => {
       <td>{category}</td>
     </tr>
   );
+};
+
+Book.propTypes = {
+  book: PropTypes.shape.isRequired,
 };
 
 export default Book;

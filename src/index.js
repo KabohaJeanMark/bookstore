@@ -1,36 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './components/App';
-import reportWebVitals from './reportWebVitals';
-
-const initialState = {
-  books: [
-    {
-      id: Math.floor(Math.random() * 100),
-      title: 'Hunger Games',
-      category: 'Action',
-    },
-    {
-      id: Math.floor(Math.random() * 100),
-      title: 'Romeo and Juliet',
-      category: 'Learning',
-    },
-    {
-      id: Math.floor(Math.random() * 100),
-      title: 'The Last Samurai',
-      category: 'History',
-    },
-  ],
-};
+import store from './reducers/index';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );
-
-reportWebVitals();
-
-export default initialState;
