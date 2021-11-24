@@ -32,3 +32,5 @@ ReactDOM.render(
 );
 
 reportWebVitals();
+
+export default initialState;
