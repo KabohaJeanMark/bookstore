@@ -4,7 +4,7 @@ const Book = ({ book }) => {
   const { id, title, category } = book;
   return (
     <tr key={id}>
-      <td>{id}</td>
+      <td>{id || Math.floor(Math.random() * 100)}</td>
       <td>{title}</td>
       <td>{category}</td>
     </tr>
