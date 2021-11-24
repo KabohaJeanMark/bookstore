@@ -5,7 +5,7 @@
 
 ## Live Demo
 
-[Heroku Link](https://marco-bookstore.herokuapp.com/)
+[Netlify Link](https://nifty-wiles-168d0c.netlify.app/)
 
 ## Built With
 
