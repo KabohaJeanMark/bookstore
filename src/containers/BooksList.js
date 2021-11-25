@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { removeBook } from '../actions';
+import { removeBook, changeFilter } from '../actions';
 import store from '../reducers';
 import CategoryFilter from '../components/CategoryFilter';
 
@@ -9,9 +9,14 @@ const BooksList = ({ books }) => {
   const handleRemoveBook = (book) => {
     store.dispatch(removeBook(book));
   };
+
+  const handleFilterChange = (e) => {
+    store.dispatch(changeFilter(e.target.value));
+  };
+
   return (
     <>
-      <CategoryFilter />
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
         <thead>
           <tr>
