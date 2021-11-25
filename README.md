@@ -5,7 +5,7 @@
 
 ## Live Demo
 
-[Netlify Link](https://nifty-wiles-168d0c.netlify.app/)
+[Netlify Link](https://xenodochial-pike-3b1f82.netlify.app/)
 
 ## Built With
 
