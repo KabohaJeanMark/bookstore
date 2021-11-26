@@ -46,7 +46,7 @@ const BooksForm = () => {
     <div className="bookList">
       <div className="addBookFormContainer">
         <h2> ADD NEW BOOK </h2>
-        <form className="flexClass">
+        <form className="spacedClass">
           <input className="bookTitle" type="text" id="title" placeholder="Book title" value={bookState.title} onChange={(e) => handleTitleChange(e)} />
           <Select className="addBookDropdown" placeholder="Category" options={options} onChange={(e) => handleCategoryChange(e)} />
           <button className="btn update-btn" type="submit" onClick={handleSubmit}>ADD BOOK</button>

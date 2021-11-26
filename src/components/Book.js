@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Book = ({ book, handleRemoveBook }) => {
   const { id, title, category } = book;
   return (
-    <div className="lesson-panel flexClass">
+    <div className="lesson-panel spacedClass">
       <div className="book-info">
         <p className="category opacity-50 font-mont font-bold md:text-sm capitalize">
           {category}
