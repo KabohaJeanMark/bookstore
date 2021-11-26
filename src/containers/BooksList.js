@@ -19,8 +19,8 @@ const BooksList = ({ books, filter }) => {
 
   return (
     <div>
-      <nav>
-        <div className="navText">
+      <nav className="flexClass">
+        <div className="navText flexClass">
           <h1 className="bookStoreCMS">Bookstore CMS</h1>
           <p className="bookHeading">BOOKS</p>
           <div className="bookCategories"><CategoryFilter handleFilterChange={handleFilterChange} /></div>

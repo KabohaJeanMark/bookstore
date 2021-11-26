@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Book = ({ book, handleRemoveBook }) => {
   const { id, title, category } = book;
   return (
-    <div className="lesson-panel">
+    <div className="lesson-panel flexClass">
       <div className="book-info">
         <p className="category opacity-50 font-mont font-bold md:text-sm capitalize">
           {category}
@@ -23,7 +23,7 @@ const Book = ({ book, handleRemoveBook }) => {
           <span className="edit">Edit</span>
         </div>
       </div>
-      <div className="progress-info ">
+      <div className="progress-info flexClass">
         <div className="circular">
           <div className="inner" />
           <div className="circle">
