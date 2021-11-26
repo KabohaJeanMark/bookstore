@@ -14,7 +14,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
   ];
 
   return (
-    <Select options={options} onChange={(e) => handleFilterChange(e)} />
+    <Select className="categoriesDropDown" options={options} onChange={(e) => handleFilterChange(e)} />
   );
 };
 
