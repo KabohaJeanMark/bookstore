@@ -27,21 +27,11 @@ const BooksList = ({ books, filter }) => {
           <FaUser className="Mask" />
         </div>
       </nav>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          {displayedBooks.map((book) => (
-            <Book key={book.id} book={book} handleRemoveBook={() => { handleRemoveBook(book); }} />
-          ))}
-        </tbody>
-      </table>
+      <div className="bookList">
+        {displayedBooks.map((book) => (
+          <Book key={book.id} book={book} handleRemoveBook={() => { handleRemoveBook(book); }} />
+        ))}
+      </div>
     </>
   );
 };
