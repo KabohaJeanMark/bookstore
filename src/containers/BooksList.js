@@ -18,7 +18,11 @@ const BooksList = ({ books, filter }) => {
 
   return (
     <>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
+      <nav>
+        <div className="bookStoreCMS">BOOKSTORE CMS</div>
+        <div className="bookHeading">BOOKS</div>
+        <div className="bookCategories"><CategoryFilter handleFilterChange={handleFilterChange} /></div>
+      </nav>
       <table>
         <thead>
           <tr>
