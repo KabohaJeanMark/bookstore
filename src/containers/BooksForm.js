@@ -43,11 +43,16 @@ const BooksForm = () => {
   };
 
   return (
-    <form>
-      <input type="text" id="title" placeholder="title" value={bookState.title} onChange={(e) => handleTitleChange(e)} />
-      <Select options={options} onChange={(e) => handleCategoryChange(e)} />
-      <button type="submit" onClick={handleSubmit}>Create book</button>
-    </form>
+    <div className="bookList">
+      <div className="addBookFormContainer">
+        <h2> ADD NEW BOOK </h2>
+        <form>
+          <input className="bookTitle" type="text" id="title" placeholder="Book title" value={bookState.title} onChange={(e) => handleTitleChange(e)} />
+          <Select className="addBookDropdown" placeholder="Category" options={options} onChange={(e) => handleCategoryChange(e)} />
+          <button className="btn update-btn" type="submit" onClick={handleSubmit}>ADD BOOK</button>
+        </form>
+      </div>
+    </div>
   );
 };
 

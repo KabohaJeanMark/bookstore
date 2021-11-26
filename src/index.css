@@ -269,3 +269,32 @@ nav {
   color: #fff;
   font-size: 0.8rem;
 }
+
+.addBookFormContainer {
+  width: 80%;
+  margin: 2.3rem auto;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bookTitle {
+  color: #888;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0 0 16px;
+  width: 50%;
+}
+
+.addBookDropdown {
+  width: 20%;
+}
+
+form button {
+  width: 20%;
+}
