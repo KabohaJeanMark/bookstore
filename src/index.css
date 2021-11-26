@@ -1,27 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
+  font-family: 'Times New Roman', Times, sans-serif;
+  letter-spacing: 1.9px;
+  padding: 0;
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+nav {
+  height: 6rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: rgb(245, 245, 245) 2px solid;
+}
+
+.flexClass {
+  display: flex;
+}
+
+.spacedClass {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navText {
+  align-items: center;
+}
+
+.bookStoreCMS {
+  margin-left: 4rem;
+  margin-right: 2rem;
+  color: #0290ff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: 'Montserrat Bold', sans-serif;
+}
+
+.bookHeading {
+  color: #121212;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+  letter-spacing: 1.9px;
+  font-family: "Roboto", sans-serif;
+  padding: 0.1rem;
+}
+
+.bookCategories {
+  width: 12rem;
+  height: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 2.6rem;
+  margin-left: 0.5rem;
+  padding: 0.1rem;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+}
+
+.navIcon {
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.Mask {
+  width: 1.363rem;
+  height: 1.363rem;
+  color: #0290ff;
+  border: solid 1px rgb(150, 148, 148);
+  border-radius: 50%;
+  margin-top: 2rem;
+  margin-right: 8rem;
+}
+
+.bookList {
+  background-color: #fafafa;
+  padding: 1.4rem 0;
+}
+
+.lesson-panel {
+  width: 80%;
+  height: 12rem;
+  margin: 2.3rem auto;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  background-color: #fff;
+  border: solid 1px rgb(240, 240, 240);
+}
+
+.book-info {
+  grid-area: auto / span 3 / auto / span 3;
+  line-height: 24px;
+  text-align: left;
+}
+
+.category {
+  color: #121212;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin: 0 0 4px;
+}
+
+.id {
+  color: #4386bf;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 0  0 16px;
+  text-align: left;
+}
+
+.button-grp {
+  margin: 32px 0 0;
+}
+
+.remove {
+  padding: 0 16px;
+  color: #4386bf;
+}
+
+.comments .edit .remove {
+  align-items: flex-start;
+  display: inline-block;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+}
+
+.comments {
+  padding: 0 16px 0 0;
+  color: #4386bf;
+  border-right: 1px solid #e5e7eb;
+}
+
+.edit {
+  padding: 0 0 0 16px;
+  color: #4386bf;
+  border-left: 1px solid #e5e7eb;
+}
+
+.progress-info {
+  align-items: center;
+  grid-area: auto / span 2 / auto / span 2;
+  justify-content: center;
+  line-height: 24px;
+  text-align: left;
+  border-right: 1px solid #e5e7eb;
+}
+
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  transform: scale(0.75);
+}
+
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #fff;
+  border-radius: 100%;
+}
+
+.circular .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0290ff;
+}
+
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 100%;
+  clip: rect(0, 100px, 100px, 50px);
+}
+
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0, 50px, 100px, 0);
+  background: #0290ff;
+}
+
+.circle .left .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.circle .right {
+  transform: rotate(180deg);
+  z-index: 3;
+}
+
+.circle .right .progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(88deg);
+  }
+}
+
+.percent {
+  width: 2.938rem;
+  height: 2.438rem;
+  margin: 1rem 7.063rem 0 0.688rem;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.update-btn {
+  background-color: #0290ff;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.addBookFormContainer {
+  width: 80%;
+  margin: 2.3rem auto;
+}
+
+form {
+  width: 100%;
+}
+
+.bookTitle {
+  color: #888;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0 0 16px;
+  width: 50%;
+}
+
+.addBookDropdown {
+  width: 20%;
+}
+
+form button {
+  width: 20%;
 }
