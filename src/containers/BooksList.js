@@ -18,12 +18,14 @@ const BooksList = ({ books, filter }) => {
   const displayedBooks = filter === 'All' ? books : books.filter((book) => book.category === filter);
 
   return (
-    <>
+    <div>
       <nav>
-        <div className="bookStoreCMS">BOOKSTORE CMS</div>
-        <div className="bookHeading">BOOKS</div>
-        <div className="bookCategories"><CategoryFilter handleFilterChange={handleFilterChange} /></div>
-        <div className="Oval">
+        <div className="navText">
+          <h1 className="bookStoreCMS">Bookstore CMS</h1>
+          <p className="bookHeading">BOOKS</p>
+          <div className="bookCategories"><CategoryFilter handleFilterChange={handleFilterChange} /></div>
+        </div>
+        <div className="navIcon">
           <FaUser className="Mask" />
         </div>
       </nav>
@@ -32,7 +34,7 @@ const BooksList = ({ books, filter }) => {
           <Book key={book.id} book={book} handleRemoveBook={() => { handleRemoveBook(book); }} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

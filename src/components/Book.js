@@ -36,7 +36,7 @@ const Book = ({ book, handleRemoveBook }) => {
           </div>
         </div>
         <div className="count">
-          <p className="percent">88%</p>
+          <p className="percent">75%</p>
           <p className="completed"> completed</p>
         </div>
       </div>
@@ -46,7 +46,7 @@ const Book = ({ book, handleRemoveBook }) => {
           {' '}
           {id}
         </p>
-        <button className=" update-btn btn btn-primary btn-lg" type="button">UPDATE PROGRESS</button>
+        <button className="update-btn btn btn-lg" type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   );
