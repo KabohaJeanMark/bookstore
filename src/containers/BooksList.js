@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { FaUser } from 'react-icons/fa';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
 import store from '../reducers';
@@ -22,6 +23,9 @@ const BooksList = ({ books, filter }) => {
         <div className="bookStoreCMS">BOOKSTORE CMS</div>
         <div className="bookHeading">BOOKS</div>
         <div className="bookCategories"><CategoryFilter handleFilterChange={handleFilterChange} /></div>
+        <div className="Oval">
+          <FaUser className="Mask" />
+        </div>
       </nav>
       <table>
         <thead>

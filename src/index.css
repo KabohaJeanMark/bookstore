@@ -40,3 +40,19 @@ nav {
   z-index: 100;
   background-color: rgb(255, 255, 255);
 }
+
+.Oval {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 1.56rem 0 0 36.5rem;
+  padding: 0.875rem;
+  border: solid 1px rgb(243, 243, 243);
+  border-radius: 80%;
+}
+
+.Mask {
+  width: 1.363rem;
+  height: 1.363rem;
+  color: #0290ff;
+  margin-left: 0.21rem;
+}
