@@ -2,10 +2,15 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 > A React-Redux BookStore Application for Magic Books Inc.
+It uses Redux for a single source of truth while doing state management.
 
 ## Live Demo
 
-[Netlify Link](https://xenodochial-pike-3b1f82.netlify.app/)
+[Netlify Link](https://adoring-cray-79b179.netlify.app/)
+
+## Screenshot
+![book app screenshot](src/assets/bookscreenshot.png)
+
 
 ## Built With
 
@@ -29,6 +34,8 @@ $ cd yourFolder
 $ git clone https://github.com/KabohaJeanMark/bookstore/
 
 ```
+## How to Use
+You can easily filter books depending on categories and add new books using the form at the bottom.
 
 ## Available Scripts
 
